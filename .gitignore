@@ -1,0 +1,21 @@
+#--------------------#
+#   Libft Ignores    #
+#--------------------#
+
+# vscode
+.vscode
+README.md
+
+# make
+a.out
+*.o
+libft.a
+
+# c++ debuger
+*.dSYM
+ft*.out
+
+# don't ignore
+!*.c
+!libft.h
+!Makefile
