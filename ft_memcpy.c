@@ -26,11 +26,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-	char src[20] = "abcdefgh";
-	printf("%s\n", ft_memcpy(src+2, src, 6));
-	// printf("%s", memcpy(null, null, 3));
-}
+// #include <stdio.h>
+// #include <string.h>
+// int main()
+// {
+// 	char src[20] = "abcdefgh";
+// 	printf("%s\n", ft_memcpy(src+2, src, 6));
+// 	// printf("%s", memcpy(null, null, 3));
+// }
