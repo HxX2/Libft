@@ -76,7 +76,6 @@ char	**ft_split(char const *s, char c)
 // 	char const str[] = {'\0'};
 // 	char c = ' ';
 // 	char **p;
-
 // 	p = ft_split(str, c);
 // 	if (!p)
 // 		printf("allocation failed\n");
