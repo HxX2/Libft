@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 08:55:38 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/18 22:24:21 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/11/21 01:30:04 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,17 @@ int	ft_wcntr(char const *s, char c)
 	return (nw);
 }
 
+char	**ft_wipe(char **p, size_t j)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < j)
+		free(p[i++]);
+	free(p);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -41,6 +52,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = -1;
+	wstart = 0;
 	p = malloc((ft_wcntr(s, c) + 1) * sizeof(char *));
 	if (!p)
 		return (NULL);
@@ -52,23 +64,24 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (j <= ft_wcntr(s, c) && (i - wstart) > 0)
 			p[++j] = ft_substr(s, wstart, (i - wstart));
-		// if (!p[j])
-			// return (ft_wipe);
+		if (!p[j])
+			return (ft_wipe(p, j));
 	}
 	p[j + 1] = NULL;
-	// ft_wipe(p);
 	return (p);
 }
 
 // int main()
 // {
-// 	char const str[] = "hlk   k hh hh h";
+// 	char const str[] = {'\0'};
 // 	char c = ' ';
 // 	char **p;
 
 // 	p = ft_split(str, c);
-// 	for (size_t i = 0; i < ft_wcntr(str, c); i++)
-// 	{
-// 		printf("%s\n", p[i]);
-// 	}	
+// 	if (!p)
+// 		printf("allocation failed\n");
+// 	size_t i =0;
+// 	while (p[i])
+// 		printf("%s\n", p[i++]);
+// 	system("leaks a.out");
 // }
