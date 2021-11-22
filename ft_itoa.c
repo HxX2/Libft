@@ -12,12 +12,40 @@
 
 #include "libft.h"
 
+char	*ft_nitoa(int n)
+{
+	char	*p;
+	int		sn;
+	int		i;
+
+	i = 2;
+	sn = n;
+	while (sn < -9)
+	{
+		sn /= 10;
+		i++;
+	}
+	p = malloc(sizeof(char) * i + 1);
+	if (!p)
+		return (NULL);
+	p[i] = '\0';
+	while (--i > 0)
+	{
+		p[i] = ((n % 10) * -1) + '0';
+		n /= 10;
+	}
+	p[i] = '-';
+	return (p);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*p;
 	int		sn;
 	int		i;
 
+	if (n < 0)
+		return (ft_nitoa(n));
 	i = 1;
 	sn = n;
 	while (sn > 9)
@@ -28,7 +56,7 @@ char	*ft_itoa(int n)
 	p = malloc(sizeof(char) * i + 1);
 	if (!p)
 		return (NULL);
-	p[i + 1] = '\0';
+	p[i] = '\0';
 	while (--i >= 0)
 	{
 		p[i] = (n % 10) + '0';
@@ -37,10 +65,8 @@ char	*ft_itoa(int n)
 	return (p);
 }
 
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	printf("%s",ft_itoa(0));
-// }
-
-// fix intmin / negative values
+#include <stdio.h>
+int	main(void)
+{
+	printf("%s",ft_itoa(2147483647));
+}
