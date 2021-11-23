@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 21:32:34 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/16 16:25:50 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/11/23 11:01:32 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strrchr(const char *s, int c);
+char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
@@ -44,5 +45,6 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_isalnum(int c);
+char	*ft_itoa(int n);
 
 #endif

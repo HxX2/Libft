@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 06:32:09 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/16 08:45:49 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/11/22 21:54:19 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,8 @@ char	*ft_itoa(int n)
 	return (p);
 }
 
-#include <stdio.h>
-int	main(void)
-{
-	printf("%s",ft_itoa(2147483647));
-}
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	printf("%s",ft_itoa(2147483647));
+// }
