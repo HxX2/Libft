@@ -1,40 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:14:21 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/24 22:23:21 by zlafou           ###   ########.fr       */
+/*   Created: 2021/11/24 17:27:05 by zlafou            #+#    #+#             */
+/*   Updated: 2021/11/24 20:03:38 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	dl;
-	size_t	sl;
-	size_t	rtn;
+	size_t	i;
 
-	sl = 0;
-	dl = 0;
-	while (src[sl])
-		sl++;
-	while (dest[dl])
-		dl++;
-	if (size <= dl)
-		rtn = size + sl;
-	else
-		rtn = dl + sl;
-	sl = 0;
-	while ((src[sl]) && (dl + sl + 1 < size))
-	{
-		dest[dl + sl] = src[sl];
-		sl++;
-	}
-	dest[dl + sl] = 0;
-	return (rtn);
+	i = -1;
+	while (s[++i])
+		f(i, &s[i]);
 }

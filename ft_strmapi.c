@@ -1,40 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 23:15:15 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/24 23:30:38 by zlafou           ###   ########.fr       */
+/*   Created: 2021/11/24 10:28:29 by zlafou            #+#    #+#             */
+/*   Updated: 2021/11/24 20:38:12 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	int		i;
-	int		j;
-	char	*ptr;
+// char	ft_toupperr(unsigned int i, char c)
+// {
+// 	(void)i;
+// 	if (c >= 'a' && c <= 'z')
+// 		c -= 32;
+// 	return (c);
+// }
 
-	if (!s1 || !set)
-		return (0);
-	i = 0;
-	j = ft_strlen(s1);
-	while (!s1[i] && ft_strchr(set, s1[i]))
-		i++;
-	while (ft_strchr(set, s1[j]))
-		j--;
-	ptr = ft_substr(s1, i, j + 1 - i);
-	if (!ptr)
-		return (0);
-	return (ptr);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char	*p;
+	size_t	i;
+
+	if (!s)
+		return (NULL);
+	p = ft_strdup(s);
+	if (!p)
+		return (NULL);
+	i = -1;
+	while (p[++i])
+		p[i] = f(i, p[i]);
+	return (p);
 }
 // #include <stdio.h>
-// int main()
+// int main(void)
 // {
-// 	char *s1 = "           ";
-// 	char *set = " ";
-// 	printf("%s", ft_strtrim(s1, set));
+// 	char s[] = "helloman";
+
+// 	printf("%s", ft_strmapi(s, &ft_toupperr));
 // }

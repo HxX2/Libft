@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 08:55:38 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/23 04:14:29 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/11/24 17:23:13 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,43 +47,43 @@ char	**ft_wipe(char **p, size_t j)
 
 char	**ft_split(char const *s, char c)
 {
-	int		it[2];
+	int		i;
+	int		j;
 	char	**p;
 	int		wstart;
 
-	it[0] = 0;
-	it[1] = -1;
+	i = 0;
+	j = 0;
 	wstart = 0;
 	if (!s)
 		return (NULL);
 	p = malloc((ft_wcntr(s, c) + 1) * sizeof(char *));
 	if (!p)
 		return (NULL);
-	while (s[it[0]])
+	while (s[i] && j < ft_wcntr(s, c))
 	{
-		while (s[it[0]] == c)
-			wstart = ++it[0];
-		while (s[it[0]] != c && s[it[0]])
-			it[0]++;
-		if (it[1] <= ft_wcntr(s, c) && (it[0] - wstart) > 0)
-			p[++it[1]] = ft_substr(s, wstart, (it[0] - wstart));
-		if (!p[it[1]])
-			return (ft_wipe(p, it[1]));
+		while (s[i] == c)
+			wstart = ++i;
+		while (s[i] != c && s[i])
+			i++;
+		p[j] = ft_substr(s, wstart, (i - wstart));
+		if (!p[j++])
+			return (ft_wipe(p, j - 1));
 	}
-	p[it[1] + 1] = NULL;
+	p[j] = NULL;
 	return (p);
 }
 
 // int main()
 // {
-// 	char const str[] = "      split       this for   me  !       ";
+// 	char const str[] = "           gdgdgdgdg";
 // 	char c = ' ';
 // 	char **p;
 // 	p = ft_split(str, c);
-// 	if (!p)
-// 		printf("allocation failed\n");
+// 	// if (!p)
+// 	// 	printf("allocation failed\n");
 // 	size_t i =0;
 // 	while (p[i])
 // 		printf("%s\n", p[i++]);
-// 	system("leaks a.out");
+// 	//system("leaks a.out");
 // }
