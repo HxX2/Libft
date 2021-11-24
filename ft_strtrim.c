@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 23:15:15 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/18 18:11:54 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/11/23 11:25:03 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	return (ptr);
 }
-#include <stdio.h>
-int main()
-{
-	char *s1 = "aaaobboabboaboabbobbhelljkoooobaabab";
-	char *set = "abo";
-	printf("%s", ft_strtrim(s1, set));
-}
+// #include <stdio.h>
+// int main()
+// {
+// 	char *s1 = "aaaobboabboaboabbobbhelljkoooobaabab";
+// 	char *set = "abo";
+// 	printf("%s", ft_strtrim(s1, set));
+// }
