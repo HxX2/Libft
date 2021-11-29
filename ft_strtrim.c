@@ -14,27 +14,27 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	char	*ptr;
+	int		s;
+	int		e;
 
 	if (!s1 || !set)
-		return (0);
-	i = 0;
-	j = ft_strlen(s1);
-	while (!s1[i] && ft_strchr(set, s1[i]))
-		i++;
-	while (ft_strchr(set, s1[j]))
-		j--;
-	ptr = ft_substr(s1, i, j + 1 - i);
-	if (!ptr)
-		return (0);
-	return (ptr);
+		return (NULL);
+	s = 0;
+	e = ft_strlen(s1);
+	while (ft_strchr(set, s1[s]) && s1[s])
+		s++;
+	while (ft_strchr(set, s1[e]) && e)
+		e--;
+	if (s > e)
+		return (ft_strdup(""));
+	return (ft_substr(s1, s, e + 1 - s));
 }
 // #include <stdio.h>
 // int main()
 // {
-// 	char *s1 = "           ";
+// 	char *s1 = "    g  ";
 // 	char *set = " ";
-// 	printf("%s", ft_strtrim(s1, set));
+// 	char *p = ft_strtrim(s1, set);
+// 	printf("%s", p);
+// 	free(p);
 // }
