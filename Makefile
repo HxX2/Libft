@@ -17,8 +17,8 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar crs $(NAME) $(OBJS)
 
-clean : 
-	rm -f *.o
+clean :
+	rm -f ${OBJS}
 
 fclean : clean
 	rm -f $(NAME)

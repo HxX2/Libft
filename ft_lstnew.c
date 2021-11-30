@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 21:35:12 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/30 06:29:02 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:44:47 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,14 @@ t_list	*ft_lstnew(void *content)
 	p->next = NULL;
 	return (p);
 }
+
 // #include <stdio.h>
 // int main()
 // {
-// 	int *i;
 // 	int x = 6557;
 // 	// i = malloc(sizeof(int) * 1);
-// 	i = &x;
 // 	t_list *p;
-// 	p = ft_lstnew(i);
+// 	p = ft_lstnew(&x);
 // 	//int z = (int)p->content;
 // 	printf("%d", *(int *)p->content);
 // }

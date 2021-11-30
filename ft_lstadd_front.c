@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 04:59:30 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/30 06:27:19 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/11/30 07:21:12 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	
+	if (!new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
 
 /*
