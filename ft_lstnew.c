@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 21:35:12 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/30 04:57:04 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/11/30 06:29:02 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstnew(void *content)
 
 	p = (t_list *)malloc(sizeof(t_list));
 	if (!p)
-		return (NULL);	
+		return (NULL);
 	p->content = content;
 	p->next = NULL;
 	return (p);
