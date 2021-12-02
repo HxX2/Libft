@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 21:32:34 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/29 22:34:34 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/02 11:16:04 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+t_list	*ft_lstnew(void *content);
+t_list	*ft_lstlast(t_list *lst);
+int		ft_lstsize(t_list *lst);
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
