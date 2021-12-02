@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 17:27:05 by zlafou            #+#    #+#             */
-/*   Updated: 2021/12/02 17:45:21 by zlafou           ###   ########.fr       */
+/*   Created: 2021/12/02 14:38:25 by zlafou            #+#    #+#             */
+/*   Updated: 2021/12/02 18:05:20 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	i;
+	t_list	**head;
+	t_list	*nwlst;
+	t_list	*nwnode;
 
-	if (!s)
-		return ;
-	i = -1;
-	while (s[++i])
-		f(i, &s[i]);
+	nwnode = NULL;
+	if (!lst)
+		return (NULL);
+	head = &nwlst;
+	nwlst = ft_lstnew(f(lst->content));
+	while (lst)
+	{
+		nwnode = ft_lstnew(f(lst->content));
+		if (!nwnode)
+			ft_lstclear(head, del);
+		ft_lstadd_back(head, nwnode);
+		lst = lst->next;
+	}
+	return (nwlst);
 }

@@ -6,14 +6,14 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 08:55:38 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/24 17:23:13 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/02 18:08:38 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_wcntr(char const *s, char c)
+static	int	ft_wcntr(char const *s, char c)
 {
 	int	i;
 	int	nw;
@@ -32,7 +32,7 @@ int	ft_wcntr(char const *s, char c)
 	return (nw);
 }
 
-char	**ft_wipe(char **p, size_t j)
+static	char	**ft_wipe(char **p, size_t j)
 {
 	size_t	i;
 

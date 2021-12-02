@@ -6,13 +6,13 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 06:32:09 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/22 21:54:19 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/02 18:07:50 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_nitoa(int n)
+static	char	*ft_nitoa(int n)
 {
 	char	*p;
 	int		sn;
