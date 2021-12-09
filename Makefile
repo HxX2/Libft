@@ -16,8 +16,9 @@ OBJS = ${SRCS:.c=.o}
 OBJS_BONUS = ${SRCS_BONUS:.c=.o}
 
 .c.o:
-	$(CC) $(CFLAGS) -I libft.h -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 	ar -rcs $(NAME) $@
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
