@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 07:05:54 by zlafou            #+#    #+#             */
-/*   Updated: 2021/12/09 19:20:34 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/09 20:20:24 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 			*lst = new;
 			return ;
 		}
-		last = lstlast(*lst);
+		last = ft_lstlast(*lst);
 		last->next = new;
 	}
 }
