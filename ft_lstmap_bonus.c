@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 14:38:25 by zlafou            #+#    #+#             */
-/*   Updated: 2021/12/07 21:38:41 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/09 23:36:53 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*nwnode;
 
 	nwnode = NULL;
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	head = &nwlst;
 	nwlst = ft_lstnew(f(lst->content));
