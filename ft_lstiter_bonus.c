@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 14:32:15 by zlafou            #+#    #+#             */
-/*   Updated: 2021/12/07 21:38:50 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/09 19:53:10 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst || !f)
+	if (!f)
 		return ;
 	while (lst)
 	{
