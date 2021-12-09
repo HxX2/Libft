@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 20:40:07 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/18 22:01:52 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/09 23:51:28 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-// #include <stdio.h>
-// #include <string.h>
-// int main()
-// {
-// 	char src[20] = "abcdefgh";
-// 	printf("%s\n", ft_memcpy(src+2, src, 6));
-// 	// printf("%s", memcpy(null, null, 3));
-// }

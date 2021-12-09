@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:33:21 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/16 02:04:17 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/09 23:57:15 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,3 @@ char	*ft_strchr(const char *s, int c)
 		return (0);
 	return ((char *)(s + i));
 }
-/*#include <stdio.h>
-#include <string.h>
-int main ()
-{
-	char s[] = "dskjh fjjk lko kki neo kd";
-	printf("%s\n", ft_strchr(s,'y'));
-	printf("%s", strchr(s,'w'));
-}*/

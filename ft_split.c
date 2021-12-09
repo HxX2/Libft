@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 08:55:38 by zlafou            #+#    #+#             */
-/*   Updated: 2021/12/02 18:08:38 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/09 23:56:41 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,17 +73,3 @@ char	**ft_split(char const *s, char c)
 	p[j] = NULL;
 	return (p);
 }
-
-// int main()
-// {
-// 	char const str[] = "           gdgdgdgdg";
-// 	char c = ' ';
-// 	char **p;
-// 	p = ft_split(str, c);
-// 	// if (!p)
-// 	// 	printf("allocation failed\n");
-// 	size_t i =0;
-// 	while (p[i])
-// 		printf("%s\n", p[i++]);
-// 	//system("leaks a.out");
-// }

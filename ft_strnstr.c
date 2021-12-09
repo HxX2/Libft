@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 15:14:15 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/15 21:36:12 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/10 00:01:52 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-// #include <stdio.h>
-// int main()
-// {
-// 	char haystack[] = "aaabaabcd";
-// 	char needle[] = "cd";
-
-// 	printf("%s", ft_strnstr(haystack, needle, 8));
-// }

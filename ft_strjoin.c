@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 20:43:43 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/24 23:11:11 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/09 23:58:32 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcpy(ptr + ft_strlen(s1), s2, ft_strlen(s2) + 1);
 	return (ptr);
 }
-// int main()
-// {
-// 	char	s1[] = "lorem ipsum ";
-// 	char	s2[] = "dolor sit amet";
-// 	char *ptr = ft_strjoin(s1, s2);
-// 	printf("%s",ptr);
-// }

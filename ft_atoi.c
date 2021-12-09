@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:15:37 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/24 23:19:44 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/09 23:44:05 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * s);
 }
-// #include <stdlib.h>
-// #include <stdio.h>
-// int main(void)
-// {
-// 	char st[] = "-9223372036854775808";
-// 	printf("%d\n",ft_atoi(st));
-// 	printf("%d",atoi(st));
-// }

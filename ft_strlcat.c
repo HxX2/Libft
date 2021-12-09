@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:14:21 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/29 20:19:27 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/09 23:59:20 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dl + sl] = 0;
 	return (rtn);
 }
-
-// int main(void)
-// {
-// 	char dest[] = "fffff";
-// 	char src[] = "ggggggggggg";
-
-// 	ft_strlcat(NULL, src, 0);
-// }

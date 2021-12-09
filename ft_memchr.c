@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 18:09:19 by zlafou            #+#    #+#             */
-/*   Updated: 2021/11/07 19:25:54 by zlafou           ###   ########.fr       */
+/*   Updated: 2021/12/09 23:49:35 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-/*#include <stdio.h>
-int main()
-{
-	char s[] = "hh ffl kfsfh hel oo weor wrp";
-	char c = 'o';
-
-	printf("%s", (char *)ft_memchr(s, c, 23));
-}*/
